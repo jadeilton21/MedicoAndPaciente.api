@@ -8,9 +8,12 @@ import org.springframework.security.core.userdetails.User;
 
 import java.time.LocalDateTime;
 import java.util.Collection;
+import java.util.List;
 
 public interface MedicoRepository extends JpaRepository<Medico, Long> {
     Page<Medico> findAllByAtivoTrue(Pageable paginacao);
     @Query()
     Medico escolherMedicoAleatorioLivreNaData(Especialidade especialidade, LocalDateTime data);
+    @Query()
+    Boolean findAllById(Long aLong);
 }
