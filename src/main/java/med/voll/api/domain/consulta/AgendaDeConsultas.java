@@ -24,6 +24,7 @@ public class AgendaDeConsultas {
     @Autowired
     private List<ValidadorAgendamentoDeConsultas> validadores;
 
+    @Autowired
     private List<ValidadorCancelamentoDeConsultas> validadoresCancelamento;
 
     public void agendar(DadosAgendamentoConsulta dados) {
