@@ -44,7 +44,7 @@ public class Consulta {
         this.motivoCancelamento = motivo;
     }
 
-    public LocalDateTime getDataTime() {
+    public LocalDateTime getData() {
         return data;
     }
 }

@@ -22,7 +22,7 @@ public interface MedicoRepository extends JpaRepository<Medico, Long> {
             m.id not in(
                 select c.medico.id from Consulta c
                 where
-                c.dataTime = :dataTime
+                c.data = :data
             and
                 c.motivoCancelamento is null
             )
