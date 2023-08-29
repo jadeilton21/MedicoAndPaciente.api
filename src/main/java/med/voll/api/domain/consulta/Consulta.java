@@ -10,7 +10,6 @@ import med.voll.api.domain.paciente.Paciente;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.time.temporal.Temporal;
 
 
 @Table(name = "consultas")
@@ -38,6 +37,8 @@ public class Consulta {
     @Column(name = "motivo_cancelamento")
     @Enumerated(EnumType.STRING)
     private MotivoCancelamento motivoCancelamento;
+
+
 
     public void cancelar(MotivoCancelamento motivo) {
 
