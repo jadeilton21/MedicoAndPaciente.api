@@ -1,5 +1,6 @@
 package med.voll.api.domain.medico;
 
+import com.auth0.jwt.interfaces.Claim;
 import med.voll.api.domain.consulta.Consulta;
 import med.voll.api.domain.endereco.DadosEndereco;
 import med.voll.api.domain.paciente.DadosCadastroPaciente;
@@ -19,7 +20,7 @@ import java.time.LocalDateTime;
 import java.time.temporal.TemporalAdjuster;
 import java.time.temporal.TemporalAdjusters;
 
-import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
 
 @DataJpaTest
@@ -40,21 +41,24 @@ class MedicoRepositoryTest {
 
         var proximaSegundaAs10 = LocalDate.now()
                 .with(TemporalAdjusters.next(DayOfWeek.MONDAY))
-                .atTime(10,0);
+                .atTime(10, 0);
 
         var medico = cadastrarMedico("Medico", "medico@voll.med", "123456", Especialidade.CARDIOLOGIA);
         var paciente = cadastrarPaciente("Paciente", "paciente@email.com", "00000000000");
         cadastrarConsulta(medico, paciente, proximaSegundaAs10);
 
-        var medicoLivre = medicoRepository.escolherMedicoAleatorioLivreNaData(Especialidade.CARDIOLOGIA,proximaSegundaAs10);
+        var medicoLivre = medicoRepository.escolherMedicoAleatorioLivreNaData(Especialidade.CARDIOLOGIA, proximaSegundaAs10);
         assertThat(medicoLivre).isNull();
 
 
     }
-    private void cadastrarConsulta(Medico medico, Paciente paciente, LocalDateTime data) {
-        em.persist(new Consulta(null,medico, paciente, data));
-    }
 
+
+
+
+    private void cadastrarConsulta(Medico medico, Paciente paciente, LocalDateTime data) {
+        em.persist(new Consulta(null, medico, paciente, data));
+    }
 
     private Medico cadastrarMedico(String nome, String email, String crm, Especialidade especialidade) {
         var medico = new Medico(dadosMedico(nome, email, crm, especialidade));
@@ -101,6 +105,3 @@ class MedicoRepositoryTest {
         );
     }
 }
-
-
-
