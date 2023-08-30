@@ -63,8 +63,7 @@ class MedicoRepositoryTest {
                 .atTime(10, 0);
 
         var medico = cadastrarMedico("Medico", "medico@voll.med", "123456", Especialidade.CARDIOLOGIA);
-        var paciente = cadastrarPaciente("Paciente", "paciente@email.com", "00000000000");
-        cadastrarConsulta(medico, paciente, proximaSegundaAs10);
+
 
         var medicoLivre = medicoRepository.escolherMedicoAleatorioLivreNaData(Especialidade.CARDIOLOGIA, proximaSegundaAs10);
         assertThat(medicoLivre).isEqualTo(medico);
