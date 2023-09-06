@@ -28,6 +28,9 @@ public class AgendaDeConsultas {
     private List<ValidadorCancelamentoDeConsultas> validadoresCancelamento;
 
     public DadosDetalhamentoConsulta agendar(DadosAgendamentoConsulta dados) {
+        if (dados == null) {
+            throw new IllegalArgumentException("O objeto 'dados' não pode ser nulo.");
+        }
         if (!pacienteRepository.existsById(dados.idPaciente())) {
             throw new ValidacaoException("Id do Paciente Informando, Não Existe.");
         }
