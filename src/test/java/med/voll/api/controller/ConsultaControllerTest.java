@@ -88,6 +88,7 @@ class ConsultaControllerTest {
         ).getJson();
 
         assertThat(response.getContentAsString()).isEqualTo(jsonEsperado);
+
     }
 
 
