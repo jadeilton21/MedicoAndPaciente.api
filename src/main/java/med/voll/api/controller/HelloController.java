@@ -17,4 +17,8 @@ public class HelloController {
     public String olaMundo2(){
         return "Viva a vida Loucamente";
     }
+
+    public String olaMundo3(){
+        return "Vida Longa a todos nós";
+    }
 }
