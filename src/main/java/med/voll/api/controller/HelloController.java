@@ -21,4 +21,10 @@ public class HelloController {
     public String olaMundo3(){
         return "Vida Longa a todos nós";
     }
+
+
+    @GetMapping
+    public String olaMundo4(){
+        return "Jah rasta";
+    }
 }
