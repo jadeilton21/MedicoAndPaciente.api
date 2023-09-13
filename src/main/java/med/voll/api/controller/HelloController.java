@@ -12,19 +12,4 @@ public class HelloController {
     public String olaMundo() {
         return "Hello World Spring!";
     }
-
-    @GetMapping
-    public String olaMundo2(){
-        return "Viva a vida Loucamente";
-    }
-    @GetMapping
-    public String olaMundo3(){
-        return "Vida Longa a todos nós";
-    }
-
-
-    @GetMapping
-    public String olaMundo4(){
-        return "Jah rasta";
-    }
 }
