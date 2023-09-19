@@ -90,10 +90,7 @@ class ConsultaControllerTest {
         assertThat(response.getContentAsString()).isEqualTo(jsonEsperado);
 
 
+
     }
-
-
-
-
 
 }
