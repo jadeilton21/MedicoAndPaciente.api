@@ -65,7 +65,7 @@ class ConsultaControllerTest {
         var especialidade = Especialidade.CARDIOLOGIA;
 
 
-        var dadosDetalhamento = new DadosDetalhamentoConsulta(null,2l, 5l, data);
+        var dadosDetalhamento = new DadosDetalhamentoConsulta(4l,2l, 5l, data);
 
 
         when(agendaDeConsultas.agendar(any())).thenReturn(dadosDetalhamento);
