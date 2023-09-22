@@ -64,10 +64,7 @@ class ConsultaControllerTest {
     }
 
 
-    @Test
-    void agendar_algo(){
 
-    }
     @Test
     @DisplayName("Deveria devolver codigo http 400 quando informacoes estao invalidas")
     @WithMockUser
