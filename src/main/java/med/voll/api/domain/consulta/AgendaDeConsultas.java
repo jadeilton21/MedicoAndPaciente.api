@@ -28,9 +28,9 @@ public class AgendaDeConsultas {
     private List<ValidadorCancelamentoDeConsultas> validadoresCancelamento;
 
     public DadosDetalhamentoConsulta agendar(DadosAgendamentoConsulta dados) {
-
-        if (dados.idPaciente() != null && !pacienteRepository.existsById(dados.idPaciente())) {
+        if ( dados.idPaciente() != null && !pacienteRepository.existsById(dados.idPaciente())) {
             throw new ValidacaoException("Id do Paciente Informando, Não Existe.");
+
         }
 
         if (dados.idMedico() != null && !medicoRepository.existsById(dados.idMedico())) {
