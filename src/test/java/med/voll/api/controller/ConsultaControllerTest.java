@@ -66,7 +66,7 @@ class ConsultaControllerTest {
 
 
     @Test
-    @DisplayName("Deveria devolver codigo http 400 quando informacoes estao invalidas")
+    @DisplayName("Deve Devolver Código http 400 quando informacoes estao invalidas")
     @WithMockUser
     void agendar_cenario1() throws Exception {
         var response = mockMvc.perform(post("/consultas")).andReturn().getResponse();
@@ -78,7 +78,7 @@ class ConsultaControllerTest {
 
 
     @Test
-    @DisplayName("Deveria Devolver Código http 200 quando as informações estiverem validas.")
+    @DisplayName("Deve Devolver Código http 200 quando as informações estiverem validas.")
     @WithMockUser
     void agendar_cenario2() throws Exception {
 

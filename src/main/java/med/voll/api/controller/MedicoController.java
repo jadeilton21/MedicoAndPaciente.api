@@ -33,7 +33,6 @@ public class MedicoController {
 
         return ResponseEntity.created(uri).body(new DadosDetalhamentoMedico(medico));
 
-
     }
 
     @GetMapping
