@@ -75,6 +75,25 @@ class ConsultaControllerTest {
 
 
     }
+    // Treinando testes:
+
+    //@Test
+    //@DisplayName("Deve Devolver Código http 400 quando Informações estão Invalidas")
+    //@WithMockUser
+    // void agendar_cenario1()throws Exception{
+    //         var response = mockMvc.perform(post("/consultas")).andReturn().getResponse();
+
+    //   assertThat(response.getStatus()).isEqualTo(HttpStatus.BAD_REQUEST.value());
+
+
+
+    //@Test
+    //DisplayName("Deve Devolver Código http 400 quando Informações estão invalidas")
+    //@WithMockUser
+    // void agendar_cenario1() throws Exception{
+    //   var response = mockMvc.perform(post("/consultas")).andReturn().getResponse();
+
+    // assertThat(response.getStatus()).isEqualTo(HttpStatus.BAD_REQUEST.value());
 
 
     @Test
