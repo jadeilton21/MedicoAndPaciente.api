@@ -7,6 +7,7 @@ import med.voll.api.domain.medico.*;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.json.AutoConfigureJsonTesters;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.json.JacksonTester;
@@ -25,9 +26,9 @@ import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 
-@SpringBootTest(classes = MedicoController.class )
-@EnableWebMvc
+@SpringBootTest
 @AutoConfigureMockMvc
+@AutoConfigureJsonTesters
 class MedicoControllerTest {
     @Autowired
     private WebApplicationContext webApplicationContext;
@@ -66,11 +67,11 @@ class MedicoControllerTest {
     @WithMockUser
     void cadastrar_cenario2() throws Exception{
         var dadosCadastro = new DadosCadastroMedico(
-                "Medico",
-                "medico@voll.med",
-                "61999999999",
-                "123456",
-                Especialidade.CARDIOLOGIA,
+                "ProficionalDaMaconha",
+                "MaconheiroMaster@voll.med",
+                "82977334066",
+                "123333",
+                Especialidade.ORTOPEDIA,
                 dadosEndereco());
 
         when(medicoRepository.save(any())).thenReturn(new Medico(dadosCadastro));
@@ -99,13 +100,13 @@ class MedicoControllerTest {
 
     private DadosEndereco dadosEndereco() {
         return new DadosEndereco(
-                "rua xpto",
+                "rua 2",
                 "bairro",
-                "00000000",
-                "Brasilia",
-                "DF",
-                null,
-                null
+                "12345678",
+                "Piranhas",
+                "AL",
+                "casa",
+                "3"
         );
     }
 
