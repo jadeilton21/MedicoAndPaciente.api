@@ -1,12 +1,15 @@
 package med.voll.api.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import med.voll.api.domain.medico.DadosCadastroMedico;
+import med.voll.api.domain.medico.DadosDetalhamentoMedico;
 import med.voll.api.domain.medico.MedicoRepository;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.json.JacksonTester;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.test.context.support.WithMockUser;
@@ -25,9 +28,13 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 class MedicoControllerTest {
     @Autowired
     private WebApplicationContext webApplicationContext;
-
     @Autowired
     private MockMvc mockMvc;
+    @Autowired
+    private JacksonTester<DadosCadastroMedico> dadosCadastroMedicoJson;
+
+    @Autowired
+    private JacksonTester<DadosDetalhamentoMedico> dadosDetalhamentoMedicoJson;
 
 
     private ObjectMapper objectMapper;
@@ -51,6 +58,12 @@ class MedicoControllerTest {
     }
 
 
+    @Test
+    @DisplayName("Deve devolver código http 200 quando informações estão validas")
+    @WithMockUser
+    void cadastrar_cenario2() throws Exception{
+
+    }
 
 
 
