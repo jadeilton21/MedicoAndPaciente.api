@@ -59,7 +59,25 @@ class MedicoControllerTest {
                 .isEqualTo(HttpStatus.BAD_REQUEST.value());
 
     }
+    //@Test
+    //@DisplayName("Deve devolver código 400 http quando informações estão invalidas")
+    //@WithMockUser
+    // void cadastro_cenario1() throws Exception{
+    //   var response = mockMvc
+    //         .perform(post("/Medicos"))
+    //         .andReturn().getResponse();
+    //      assertThat(response.getStatus())
+    //          .isEqualTo(HttpStatus.BAD_REQUEST.value());
 
+    //@Test
+    //DisplayName("Deve devolver Código 400 http quando informações estão invalidas")
+    //@WithMockUser
+    // void cadastro_cenario1() throws Exception{
+    //      var response = mockMvc
+    //      .perform(post("/Medicos"))
+    //      .andReturn().getResponse();
+    //    assertThat(response.getStatus())
+    //          .isEqualTo(HttpStatus.BAD_REQUEST.value());
 
     @Test
     @DisplayName("Deve devolver código http 200 quando informações estão validas")
