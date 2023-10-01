@@ -157,6 +157,10 @@ class MedicoControllerTest {
     }
 
     @Test
-    void excluir() {
+    @DisplayName("Deve devolver Código http 400 quando informações estiverem invalidas..")
+    @WithMockUser
+    void excluir_cenario1() throws Exception {
+
+
     }
 }
