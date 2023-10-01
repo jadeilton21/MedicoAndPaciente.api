@@ -155,4 +155,8 @@ class MedicoControllerTest {
                 .isEqualTo(HttpStatus.BAD_REQUEST.value());
 
     }
+
+    @Test
+    void excluir() {
+    }
 }
