@@ -174,5 +174,12 @@ class MedicoControllerTest {
     @DisplayName("Deve devolver código http 400 quando informações stiverem invalidas")
     @WithMockUser
     void detalhar_cenario1() throws Exception {
+
+        var response = mockMvc
+                .perform(post("/medicos"))
+                .andReturn().getResponse();
+
+        assertThat(response.getStatus())
+                .isEqualTo(HttpStatus.BAD_REQUEST.value());
     }
 }
