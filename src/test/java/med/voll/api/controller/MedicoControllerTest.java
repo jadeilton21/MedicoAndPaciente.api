@@ -171,6 +171,8 @@ class MedicoControllerTest {
     }
 
     @Test
-    void detalhar() {
+    @DisplayName("Deve devolver código http 400 quando informações stiverem invalidas")
+    @WithMockUser
+    void detalhar_cenario1() throws Exception {
     }
 }
