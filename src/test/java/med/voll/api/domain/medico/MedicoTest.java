@@ -34,4 +34,10 @@ class MedicoTest {
         assertThat(response.getStatus())
                 .isEqualTo(HttpStatus.BAD_REQUEST.value());
     }
+
+    @Test
+    @DisplayName("Deve Deveolver Código http 400 quando informações estiverem invalidas.")
+    @WithMockUser
+    void excluir_cenario1() {
+    }
 }
