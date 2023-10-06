@@ -48,8 +48,5 @@ class MedicoTest {
                 .isEqualTo(HttpStatus.BAD_REQUEST.value());
 
 
-
-
-
     }
 }
