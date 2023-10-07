@@ -39,7 +39,13 @@ class PacienteTest {
     @DisplayName("Deve Devolver Código htpp 400 quando informações estiverem invalidas.")
     @WithMockUser
     void excluir() throws Exception{
+        var repsonse = mockMvc
+                .perform(post("/pacientes"))
+                .andReturn().getResponse();
 
+
+        assertThat(repsonse.getStatus())
+                .isEqualTo(HttpStatus.BAD_REQUEST.value());
 
 
 
