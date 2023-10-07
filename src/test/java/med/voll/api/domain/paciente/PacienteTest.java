@@ -34,4 +34,15 @@ class PacienteTest {
         assertThat(response.getStatus())
                 .isEqualTo(HttpStatus.BAD_REQUEST.value());
     }
+
+    @Test
+    @DisplayName("Deve Devolver Código htpp 400 quando informações estiverem invalidas.")
+    @WithMockUser
+    void excluir() throws Exception{
+
+
+
+
+
+    }
 }
