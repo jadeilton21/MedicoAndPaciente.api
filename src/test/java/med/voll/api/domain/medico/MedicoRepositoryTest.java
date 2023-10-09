@@ -50,7 +50,6 @@ class MedicoRepositoryTest {
         var medicoLivre = medicoRepository.escolherMedicoAleatorioLivreNaData(Especialidade.CARDIOLOGIA, proximaSegundaAs10);
         assertThat(medicoLivre).isNull();
 
-
     }
 
     @Test
